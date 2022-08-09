@@ -1,4 +1,5 @@
-/*          Ödev
+/*         Ödev
+
 Koç Burcu : 21 Mart - 20 Nisan
 
 Boğa Burcu : 21 Nisan - 21 Mayıs
@@ -25,105 +26,54 @@ Balık Burcu : 20 Şubat - 20 Mart
 
 
 */
-
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int month;
-        String burc = "";
-        int day;
-        Scanner input = new Scanner(System.in);
-        System.out.println("Doğduğunuz ay :");
-        month = input.nextInt();
 
-        System.out.println("Doğduğunuz gun:");
-        day = input.nextInt();
+        int day,month;
+        Scanner input= new Scanner(System.in);
+        System.out.println("Doğum Gününüzü Giriniz:");
+        day= input.nextInt();
+        System.out.println("Doğum Ayınızı Giriniz:");
+        month= input.nextInt();
 
-            if (month == 1) {
-            if (day >= 22)
-                System.out.println("Kova Burcu" + burc);
-            else
-                System.out.println("Oğlak Burcu" + burc);
+        if (  (day>=21 && day<=31 && month==3) || (day>=1 && day<=20) && month==4       ){
+            System.out.println("Koç Burcusunuz");
         }
-            if (month == 2) {
-            if (day >=20) {
-                System.out.println("Balık Burcu" + burc);
-            } else {
-                System.out.println("Kova Burcu" + burc);
-            }
-                if (month == 3) {
-                if (day >=20) {
-                    System.out.print("Koç Burcu" + burc);
-                } else {
-                    System.out.print("Balık Burcu" + burc);
-                }
-                    if (month == 4) {
-                    if (day >=20) {
-                        System.out.println("Boğa Burcu" + burc);
-                    } else {
-                        System.out.println("Koç Burcu" + burc);
-                    }
-                        if (month == 5) {
-                        if (day >=21) {
-                            System.out.println("İkizler Burcu" + burc);
-                        } else {
-                            System.out.println("Boğa Burcu" + burc);
-                        }
-                            if (month == 6) {
-                            if (day >=22) {
-                                System.out.println("Yengeç Burcu" + burc);
-                            } else {
-                                System.out.println("İkizler Burcu" + burc);
-                            }
-                                if (month == 7) {
-                                if (day >=22) {
-                                    System.out.println("Aslan Burcu" + burc);
-                                } else {
-                                    System.out.println("Yengeç Burcu" + burc);
-                                }
-                                    if (month == 8) {
-                                    if (day >=22) {
-                                        System.out.println("Başak Burcu" + burc);
-                                    } else {
-                                        System.out.println("Aslan Burcu" + burc);
-                                    }
-                                        if (month == 9) {
-                                        if (day >=22) {
-                                            System.out.println("Terazi burcu" + burc);
-                                        } else {
-                                            System.out.println("Başak Burcu" + burc);
-                                        }
-                                            if (month == 10) {
-                                            if (day >=22) {
-                                                System.out.println("Akrep burcu" + burc);
-                                            } else {
-                                                System.out.println("Terazi Burcu" + burc);
-                                            }
-                                                if (month == 11) {
-                                                if (day >=21) {
-                                                    System.out.println("Yay Burcu" + burc);
-                                                } else {
-                                                    System.out.println("Akrep Burcu" + burc);
-                                                }
-                                                    if (month == 12) {
-                                                    if (day >=21) {
-                                                        System.out.println("Oğlak Burcu " + burc);
-                                                    } else {
-                                                        System.out.println("Yay  Burcu" + burc);
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+        else if (  (day>=21 && day<=30 && month==4) || (day>=1 && day<=21) && month==5  ){
+            System.out.println("Boğa Burcusunuz");
+        }
+        else if (  (day>=22 && day<=31 && month==5) || (day>=1 && day<=22) && month==6  ){
+            System.out.println("İkizler Burcusunuz");
+        }
+        else if (  (day>=23 && day<=30 && month==6) || (day>=1 && day<=22) && month==7  ){
+            System.out.println("Yengeç Burcusunuz");
+        }
+        else if (  (day>=23 && day<=31 && month==7) || (day>=1 && day<=22) && month==8  ){
+            System.out.println("Aslan Burcusunuz");
+        }
+        else if (  (day>=23 && day<=31 && month==8) || (day>=1 && day<=22) && month==9  ){
+            System.out.println("Başak Burcusunuz");
+        }
+        else if (  (day>=23 && day<=30 && month==9) || (day>=1 && day<=22) && month==10  ){
+            System.out.println("Terazi Burcusunuz");
+        }
+        else if (  (day>=23 && day<=31 && month==10) || (day>=1 && day<=22) && month==11  ){
+            System.out.println("Akrep Burcusunuz");
+        }
+        else if (  (day>=22 && day<=30 && month==11) || (day>=1 && day<=21) && month==12  ){
+            System.out.println("Yay Burcusunuz");
+        }
+        else if (  (day>=22 && day<=31 && month==12) || (day>=1 && day<=21) && month==1  ){
+            System.out.println("Oğlak Burcusunuz");
+        }
+        else if (  (day>=22 && day<=31 && month==1) || (day>=1 && day<=19) && month==2  ){
+            System.out.println("Kova Burcusunuz");
+        }
+        else if (  (day>=20 && day<=28 && month==2) || (day>=1 && day<=20) && month==3  ){
+            System.out.println("Balık Burcusunuz");
         }
     }
 }
-
 
